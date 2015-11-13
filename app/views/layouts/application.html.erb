@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smartgrid Gurgaon</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render partial: 'layouts/header/header' %>
+  <div class="container">
+    <div class="sg-content">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
