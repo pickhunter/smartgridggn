@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'mpgoi/about'
+
+  get 'mpgoi/responsibilites'
+
+  get 'dhbvn/misson'
+
+  get 'dhbvn/vision_and_values'
+
+  get 'dhbvn/board_of_directors'
+
   get 'about-us', to:'static_pages#about', as: 'about_us'
   get 'news', to:'static_pages#news', as: 'news'
   get 'vendor', to:'static_pages#vendor', as: 'vendor'
+  get 'dhbvn', to:'static_pages#dhbvn', as: 'dhbvn'
+  get 'power-government-of-haryana', to:'static_pages#pgoh', as: 'pgoh'
+  get 'ministry-power-government-of-india', to:'static_pages#mpgio', as: 'mpgio'
   get 'specification', to:'static_pages#specification', as: 'specification'
 
   root to: 'home#index'

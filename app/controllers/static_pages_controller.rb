@@ -15,4 +15,10 @@ class StaticPagesController < ApplicationController
 
   def under_construction
   end
+
+  def pgoh
+  end
+
+  def mpgio
+  end
 end

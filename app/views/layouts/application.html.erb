@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Smartgrid Gurgaon</title>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= render partial: 'layouts/header/stylesheets' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,5 +12,6 @@
       <%= yield %>
     </div>
   </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

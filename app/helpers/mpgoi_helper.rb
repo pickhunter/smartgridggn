@@ -1,0 +1,2 @@
+module MpgoiHelper
+end

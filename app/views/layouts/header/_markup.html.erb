@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,7 +14,32 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'about' ? 'active' : '' %>"><a href="<%= about_us_path %>">About Us<span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a id="dLabel" role="button" data-toggle="dropdown" class="" data-target="#" href="/page.html">
+              About Us <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li class="dropdown-submenu">
+              <a tabindex="-1" href="<%= dhbvn_path %>">DHBVN</a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= dhbvn_misson_path %>">Misson</a></li>
+                <li><a href="<%= dhbvn_vision_and_values_path %>">Vision &amp; Values</a></li>
+                <li><a href="<%= dhbvn_board_of_directors_path %>">Board of Directors</a></li>
+              </ul>
+            </li>
+            <li><a href="<%= pgoh_path %>">Power Govt. of Haryana</a></li>
+            <li class="dropdown-submenu">
+              <a tabindex="-1" href="<%= dhbvn_path %>">Ministry of Power Government of India</a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= mpgoi_about_path %>">About</a></li>
+                <li><a href="<%= mpgoi_responsibilites_path %>">Responsibilities</a></li>
+              </ul>
+            </li>
+            
+            <li role="separator" class="divider"></li>
+            <li><a href="<%= about_us_path %>">About Us</a></li>
+          </ul>
+        </li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'specification' ? 'active' : '' %>"><a href="<%= specification_path %>">Specification</a></li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'news' ? 'active' : '' %>"><a href="<%= news_path %>">News</a></li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'vendor' ? 'active' : '' %>"><a href="<%= vendor_path %>">Vendor</a></li>
