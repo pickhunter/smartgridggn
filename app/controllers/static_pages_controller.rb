@@ -4,4 +4,15 @@ class StaticPagesController < ApplicationController
 
   def news
   end
+
+  def vendor
+    render :under_construction
+  end
+
+  def specification
+    render :under_construction
+  end
+
+  def under_construction
+  end
 end

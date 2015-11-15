@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'about-us', to:'static_pages#about', as: 'about_us'
   get 'news', to:'static_pages#news', as: 'news'
+  get 'vendor', to:'static_pages#vendor', as: 'vendor'
+  get 'specification', to:'static_pages#specification', as: 'specification'
 
   root to: 'home#index'
 
