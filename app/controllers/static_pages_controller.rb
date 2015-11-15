@@ -24,4 +24,7 @@ class StaticPagesController < ApplicationController
 
   def contact_us
   end
+
+  def smart_grid
+  end
 end

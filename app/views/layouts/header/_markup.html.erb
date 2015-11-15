@@ -15,6 +15,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
+          <a href="<%= smart_grid_path %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Smart Grid <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<%= "#{smart_grid_path}#link_0" %>">The Smart Grid</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_1" %>">What Makes a Grid “Smart?”</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_2" %>">What does a Smart Grid do?</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_3" %>">Giving Consumers Control</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_4" %>">Building and Testing the Smart Grid</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
           <a id="dLabel" role="button" data-toggle="dropdown" class="" data-target="#" href="/page.html">
               About Us <span class="caret"></span>
           </a>
@@ -44,19 +54,6 @@
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'specification' ? 'active' : '' %>"><a href="<%= specification_path %>">Specification</a></li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'news' ? 'active' : '' %>"><a href="<%= news_path %>">News</a></li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'vendor' ? 'active' : '' %>"><a href="<%= vendor_path %>">Vendor</a></li>
-
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search">

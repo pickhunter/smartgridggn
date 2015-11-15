@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'dhbvn/board_of_directors'
 
   get 'about-us', to:'static_pages#about', as: 'about_us'
+  get 'smartgrid', to:'static_pages#smart_grid', as: 'smart_grid'
   get 'news', to:'static_pages#news', as: 'news'
   get 'vendor', to:'static_pages#vendor', as: 'vendor'
   get 'dhbvn', to:'static_pages#dhbvn', as: 'dhbvn'
