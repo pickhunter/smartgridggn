@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'power-government-of-haryana', to:'static_pages#pgoh', as: 'pgoh'
   get 'ministry-power-government-of-india', to:'static_pages#mpgio', as: 'mpgio'
   get 'specification', to:'static_pages#specification', as: 'specification'
+  get 'contact-us', to: 'static_pages#contact_us', as: 'contact_us'
 
   root to: 'home#index'
 

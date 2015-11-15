@@ -21,4 +21,7 @@ class StaticPagesController < ApplicationController
 
   def mpgio
   end
+
+  def contact_us
+  end
 end
