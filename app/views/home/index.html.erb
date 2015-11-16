@@ -2,48 +2,52 @@
 
 <%
 images = [{
-  url: 'http://placebeard.it/900x400',
-  caption: 'Smart Grid Image 1'
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/1.jpg',
+  caption: 'Smart Grid Image Caption 1'
 },
 {
-  url: 'http://placebeard.it/900x400',
-  caption: 'Smart Grid Image 2'
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/2.jpg',
+  caption: 'Smart Grid Image Caption 2'
+},
+{
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/3.jpg',
+  caption: 'Smart Grid Image Caption 3'
 }]
 %>
-<% if false %>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <% images.each_with_index do |image, i| %>
-    <div class="item <%= i == 0 ? 'active' : '' %>">
-      <img src="<%= image[:url] %>" alt="<%= image[:caption] %>">
-      <div class="carousel-caption">
-        <%= image[:caption] %>
+<div class="col-md-6">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% images.each_with_index do |image, i| %>
+      <div class="item <%= i == 0 ? 'active' : '' %>">
+        <img src="<%= image[:url] %>" alt="<%= image[:caption] %>">
+        <div class="carousel-caption">
+          <%= image[:caption] %>
+        </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-<% end %>
 
-
-<div>
+<div class="col-md-6">
   <p>Maybe you have heard of the Smart Grid on the news or from your energy provider. But not everyone knows what the grid is, let alone the Smart Grid. "The grid," refers to the electric grid, a network of transmission lines, substations, transformers and more that deliver electricity from the power plant to your home or business. It’s what you plug into when you flip on your light switch or power up your computer. Our current electric grid was built in the 1890s and improved upon as technology advanced through each decade. Today, it consists of more than 9,200 electric generating units with more than 1 million megawatts of generating capacity connected to more than 300,000 miles of transmission lines. Although the electric grid is considered an engineering marvel, we are stretching its patchwork nature to its capacity. To move forward, we need a new kind of electric grid, one that is built from the bottom up to handle the groundswell of digital and computerized equipment and technology dependent on it—and one that can automate and manage the increasing complexity and needs of electricity in the 21st Century.</p>
 </div>
