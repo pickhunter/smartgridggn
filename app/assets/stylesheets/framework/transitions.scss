@@ -1,0 +1,26 @@
+$transition-duration-fast: 150ms;
+$base-transition-duration: 200ms;
+$transition-duration-delayed-1: 400ms;
+
+@mixin transition($duration:$base-transition-duration, $fx:ease-out){
+  -webkit-transition: $duration $fx;
+  -moz-transition: $duration $fx;
+  -o-transition: $duration $fx;
+  transition: $duration $fx;
+}
+
+.gm-default-transition{
+  @include transition();
+}
+
+.gm-slow-transition{
+  @include transition($transition-duration-delayed-1);
+}
+
+.gm-fast-transition{
+  @include transition($transition-duration-fast);
+}
+
+*{
+  @extend .gm-default-transition;
+}

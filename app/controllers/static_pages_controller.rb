@@ -27,4 +27,7 @@ class StaticPagesController < ApplicationController
 
   def smart_grid
   end
+
+  def smart_grid_project_gurgaon
+  end
 end

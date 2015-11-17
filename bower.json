@@ -16,6 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-hover-dropdown": "~2.1.3"
+    "bootstrap-hover-dropdown": "~2.1.3",
+    "bootswatch": "~3.3.5+4",
+    "font-awesome": "~4.4.0"
+  },
+  "resolutions": {
+    "bootswatch": "~3.3.5+4"
   }
 }

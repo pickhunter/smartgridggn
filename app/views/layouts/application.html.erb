@@ -7,11 +7,11 @@
 </head>
 <body>
   <%= render partial: 'layouts/header/header' %>
-  <div class="container">
-    <div class="sg-content">
+  <div class="container" id="top">
+    <div class="sg-content col-md-12">
       <%= yield %>
     </div>
   </div>
-  <%= javascript_include_tag 'application' %>
+  <%= render partial: 'layouts/footer/footer' %>
 </body>
 </html>

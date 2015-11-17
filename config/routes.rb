@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'smart_grid/what'
+
+  get 'smart_grid/existing'
+
+  get 'smart_grid/need'
+
+  get 'smart_grid/main_features'
+
+  get 'smart_grid/phases'
+
   get 'mpgoi/about'
 
   get 'mpgoi/responsibilites'
@@ -19,6 +29,7 @@ Rails.application.routes.draw do
   get 'ministry-power-government-of-india', to:'static_pages#mpgio', as: 'mpgio'
   get 'specification', to:'static_pages#specification', as: 'specification'
   get 'contact-us', to: 'static_pages#contact_us', as: 'contact_us'
+  get 'smart-grid-project-gurgaon', to: 'static_pages#smart_grid_project_gurgaon', as: 'smart_grid_project_gurgaon'
 
   root to: 'home#index'
 

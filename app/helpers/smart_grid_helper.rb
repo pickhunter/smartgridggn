@@ -1,0 +1,2 @@
+module SmartGridHelper
+end

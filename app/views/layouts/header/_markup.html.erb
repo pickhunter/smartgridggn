@@ -1,34 +1,38 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
   <div class="container-fluid container">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="col-md-12 hidden-xs">
+      <h3>Smart Grid Gurgaon Leading to Smart City</h3>
+      <div>
+        <small>An initiative by DHBVN (Govt. of Haryana Undertaking), Power Department Haryana and Ministry of Power Government of India</small>
+      </div>
+    </div>
+    
+    <div class="navbar-header visible-xs">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<%= root_path %>">SmartGrid</a>
+      <a class="navbar-brand" href="<%= root_path %>">Smart Grid Gurgaon</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="<%= smart_grid_path %>" data-hover="dropdown" data-delay="100" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Smart Grid <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="<%= smart_grid_path %>">The Smart Grid</a></li>
-            <li><a href="<%= "#{smart_grid_path}#link_1" %>">What Makes a Grid “Smart?”</a></li>
-            <li><a href="<%= "#{smart_grid_path}#link_2" %>">What does a Smart Grid do?</a></li>
-            <li><a href="<%= "#{smart_grid_path}#link_3" %>">Giving Consumers Control</a></li>
-            <li><a href="<%= "#{smart_grid_path}#link_4" %>">Building and Testing the Smart Grid</a></li>
-          </ul>
+        <li>
+          <a href="<%= root_path %>">
+            <span class="fa fa-home"></span>
+            <span class="visible-xs">Home</span>
+          </a>
         </li>
         <li class="dropdown">
           <a id="dLabel" role="button" data-hover="dropdown" data-delay="100" data-toggle="dropdown" class="" data-target="#" href="/page.html">
               About Us <span class="caret"></span>
           </a>
           <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li><a href="<%= smart_grid_project_gurgaon_path %>">Smart Grid Project Gurgaon</a></li>
             <li class="dropdown-submenu">
               <a tabindex="-1" href="<%= dhbvn_path %>">DHBVN</a>
               <ul class="dropdown-menu">
@@ -51,9 +55,28 @@
             <li><a href="<%= contact_us_path %>">Contact Us</a></li>
           </ul>
         </li>
+        <!-- <li class="dropdown">
+          <a href="<%= smart_grid_path %>" data-hover="dropdown" data-delay="100" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Smart Grid <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="<%= smart_grid_path %>">The Smart Grid</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_1" %>">What Makes a Grid “Smart?”</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_2" %>">What does a Smart Grid do?</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_3" %>">Giving Consumers Control</a></li>
+            <li><a href="<%= "#{smart_grid_path}#link_4" %>">Building and Testing the Smart Grid</a></li>
+          </ul>
+        </li> -->
+
+        <li class="dropdown">
+          <a href="<%= smart_grid_path %>" data-hover="dropdown" data-delay="100" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Smart Grid <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <%= render partial: 'shared/smart_grid_links' %>
+          </ul>
+        </li>
+        
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'specification' ? 'active' : '' %>"><a href="<%= specification_path %>">Specification</a></li>
         <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'news' ? 'active' : '' %>"><a href="<%= news_path %>">News</a></li>
-        <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'vendor' ? 'active' : '' %>"><a href="<%= vendor_path %>">Vendor</a></li>
+        <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'vendor' ? 'active' : '' %>"><a href="<%= vendor_path %>">Tender</a></li>
+        <li class="<%= params[:controller] == 'static_pages' && params[:action] == 'vendor' ? 'active' : '' %>"><a href="<%= vendor_path %>">Suggestion Forum</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <form class="navbar-form navbar-left" role="search">
