@@ -5,16 +5,13 @@
 
 <%
 images = [{
-  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/1.jpg',
-  caption: 'Smart Grid Image Caption 1'
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/1.jpg'
 },
 {
-  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/2.jpg',
-  caption: 'Smart Grid Image Caption 2'
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/2.jpg'
 },
 {
-  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/3.jpg',
-  caption: 'Smart Grid Image Caption 3'
+  url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/3.jpg'
 }]
 %>
 <div class="row">
@@ -39,9 +36,6 @@ images = [{
         <% images.each_with_index do |image, i| %>
         <div class="item <%= i == 0 ? 'active' : '' %>">
           <img src="<%= image[:url] %>" alt="<%= image[:caption] %>">
-          <div class="carousel-caption">
-            <%= image[:caption] %>
-          </div>
         </div>
         <% end %>
       </div>

@@ -7,4 +7,7 @@ class DhbvnController < ApplicationController
 
   def board_of_directors
   end
+
+  def faq
+  end
 end

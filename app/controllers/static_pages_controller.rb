@@ -30,4 +30,10 @@ class StaticPagesController < ApplicationController
 
   def smart_grid_project_gurgaon
   end
+
+  def associated_sites
+  end
+
+  def downloads
+  end
 end

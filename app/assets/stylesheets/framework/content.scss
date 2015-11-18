@@ -1,0 +1,7 @@
+.sg-content{
+  margin-bottom: 30px;
+
+  p{
+    @extend .text-justify;
+  }
+}

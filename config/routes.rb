@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'dhbvn/board_of_directors'
 
+  get 'dhbvn/faq'
+
   get 'about-us', to:'static_pages#about', as: 'about_us'
   get 'smartgrid', to:'static_pages#smart_grid', as: 'smart_grid'
   get 'news', to:'static_pages#news', as: 'news'
@@ -30,7 +32,8 @@ Rails.application.routes.draw do
   get 'specification', to:'static_pages#specification', as: 'specification'
   get 'contact-us', to: 'static_pages#contact_us', as: 'contact_us'
   get 'smart-grid-project-gurgaon', to: 'static_pages#smart_grid_project_gurgaon', as: 'smart_grid_project_gurgaon'
-
+  get 'associated-sites', to: 'static_pages#associated_sites', as: 'associated_sites'
+  get 'downloads', to: 'static_pages#downloads', as: 'downloads'
   root to: 'home#index'
 
   get 'home/index'
