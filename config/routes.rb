@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 
   get 'dhbvn/faq'
 
+  get 'dhbvn/org-structure'
+  get 'dhbvn/posts'
+
   get 'about-us', to:'static_pages#about', as: 'about_us'
   get 'smartgrid', to:'static_pages#smart_grid', as: 'smart_grid'
   get 'news', to:'static_pages#news', as: 'news'

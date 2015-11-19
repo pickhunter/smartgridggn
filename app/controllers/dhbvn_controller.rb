@@ -10,4 +10,10 @@ class DhbvnController < ApplicationController
 
   def faq
   end
+
+  def org_structure
+  end
+
+  def posts
+  end
 end
