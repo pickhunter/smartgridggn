@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   get 'smart-grid-project-gurgaon', to: 'static_pages#smart_grid_project_gurgaon', as: 'smart_grid_project_gurgaon'
   get 'associated-sites', to: 'static_pages#associated_sites', as: 'associated_sites'
   get 'downloads', to: 'static_pages#downloads', as: 'downloads'
+  get 'prebid-conf-1', to: 'static_pages#prebid_conf_1', as: 'prebid_conf_1'
+
   root to: 'home#index'
 
   get 'home/index'

@@ -36,4 +36,7 @@ class StaticPagesController < ApplicationController
 
   def downloads
   end
+
+  def prebid_conf_1
+  end
 end
