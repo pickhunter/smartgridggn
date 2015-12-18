@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'news', to:'static_pages#news', as: 'news'
   get 'vendor', to:'static_pages#vendor', as: 'vendor'
   get 'dhbvn', to:'static_pages#dhbvn', as: 'dhbvn'
+  get 'under-construction', to: 'static_pages#under_construction', as: 'under_construction'
   get 'power-government-of-haryana', to:'static_pages#pgoh', as: 'pgoh'
   get 'ministry-power-government-of-india', to:'static_pages#mpgio', as: 'mpgio'
   get 'specification', to:'static_pages#specification', as: 'specification'
@@ -38,6 +39,7 @@ Rails.application.routes.draw do
   get 'associated-sites', to: 'static_pages#associated_sites', as: 'associated_sites'
   get 'downloads', to: 'static_pages#downloads', as: 'downloads'
   get 'prebid-conf-1', to: 'static_pages#prebid_conf_1', as: 'prebid_conf_1'
+
 
   root to: 'home#index'
 
