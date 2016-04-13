@@ -5,8 +5,7 @@ class StaticPagesController < ApplicationController
   def news
   end
 
-  def vendor
-    render :under_construction
+  def tender
   end
 
   def specification
