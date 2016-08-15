@@ -14,29 +14,6 @@ images = [{
   url: '//s3-ap-southeast-1.amazonaws.com/smartgridggn/home-carousel-images/3.jpg'
 }]
 
-latest_updates = [
-  {
-    update: "Corrigendum-III against NIT No. TSGP-02/2016-17",
-    link: "https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/Corrigendum-III+against+NIT+No.+TSGP-02%3A2016-17.zip"
-  },
-  {
-    update: "Corrigendum to TSGP-02/2016-17",
-    link: "https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/TSGP-02%3A2016-17.zip"
-
-  },
-  {
-    update: "List of Participants in Pre-bid Conference held on 06.05.2016",
-    link: "https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/Pre-Bid+6.5.2016+List+of+participant.docx"
-  },
-  {
-    update: "Conducting foot survey, designing the system, supply of material and erection for conversion of existing 11 kV and LT overhead distribution system into 100% redundant underground system in Ring main configuration and installation of 11/ 0.433 kV Distribution Transformer (conventional and package type) and SCADA enabling equipments such as RMU with inbuilt FRTU and FPI, optical fibre cable, LT feeder panel, street light alongwith the associated civil works, dismantlement of existing HT/ LT system, integration with existing systems, complete testing and commissioning,  alongwith the support services including operation and maintenance of the system so installed for a period of 5 years after the commissioning of entire project- in the area of DLF operation sub-division, DHBVN, Gurgaon, under the jurisdiction of DHBVN.",
-    link: 'https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/Archive.zip'
-  },
-  {
-    update: "Request for conducting the land/field surveys photogrammetry through GPR/GIS and office work required to compile a TOPOGRAPHIC/ UNDERGROUND map of property(s) identified in tender documents to generate requisite information for design and field engineering activities for the area pertaining to DLF sub-division of Gurgaon circle under the jurisdiction of DHBVN on turnkey basis in Haryana State against tender enquiry no. TSGP-01/ 2016-17",
-    link: 'https://www.dropbox.com/s/df9lej55uutwcvr/tender.zip?dl=1'
-  }
-]
 %>
 <div class="row">
   <div class="col-md-3">
@@ -44,12 +21,12 @@ latest_updates = [
       <div class="panel-heading">Latest News</div>
       <div class="panel-body">
         <ul class="no-list-style">
-          <% latest_updates.each do |update| %>
+          <% (Update.order('updated_at DESC').take(3) + Tender.order('updated_at DESC').take(2)).each do |update| %>
           <li>
-            <a href="<%= update[:link] %>" title="<%= update[:update] %>">
+            <a href="<%= update.file.url %>" title="<%= update.text %>">
               <span class="fa fa-star text-danger"></span>
               <span>&nbsp;</span>
-              <span><%= truncate update[:update], length: 120 %></span>
+              <span><%= truncate update.text, length: 120 %></span>
             </a>
           </li>
           <% end %>

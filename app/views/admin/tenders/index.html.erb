@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tenders</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>File</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tenders.each do |tender| %>
+      <tr>
+        <td><%= tender.text %></td>
+        <td><%= tender.file_file_name %></td>
+        <td><%= tender.created_at.strftime("%a, %d %b %y %l:%M %p") %></td>
+        <td><%= tender.updated_at.strftime("%a, %d %b %y %l:%M %p") %></td>
+        <td><%= link_to 'Show', tender %></td>
+        <td><%= link_to 'Edit', edit_tender_path(tender) %></td>
+        <td><%= link_to 'Destroy', tender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tender', new_tender_path %>

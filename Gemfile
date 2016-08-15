@@ -52,4 +52,10 @@ end
 
 gem 'rails_12factor', group: :production
 gem "font-awesome-rails"
+gem 'paperclip'
+gem "mime-types"
+gem 'fog'
+gem "fog-aws"
+gem 'aws-sdk'
+gem 'config'
 

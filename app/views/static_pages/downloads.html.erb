@@ -1,41 +1,8 @@
 <h1>Downloads</h1>
 <ul>
-
+  <% Update.all.each do |update| %>
   <li>
-    <a href="https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/Corrigendum-III+against+NIT+No.+TSGP-02%3A2016-17.zip">Corrigendum-III against NIT No. TSGP-02/2016-17</a>
+    <a href="<%= update.file.url %>"><%= update.text %></a>
   </li>
-
-  <li>
-    <a href="https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/TSGP-02%3A2016-17.zip">Corrigendum to TSGP-02/2016-17 </a>
-  </li>
-
-  <li>
-    <a href="https://s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/documents/Pre-Bid+6.5.2016+List+of+participant.docx">List of Participants in Pre-bid Conference held on 06.05.2016</a>
-  </li>
-
-  <li>
-    <a href="https://www.dropbox.com/s/mroyvc2krmh4wyy/Final_new.pdf?dl=1">Project Report on Development of Smart Grid Leading to Smart City Gurgaon</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/1m8p7sewszahgbh/MOM%20-%2029th%20October%20-%20ACS%20Power%20-%20Chandigarh.doc?dl=1">MOM - 29th October - ACS Power - Chandigarh</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/5si61odgt9souv2/National_Smart_Grid_Mission_OM.pdf?dl=1">National Smart Grid Mission OM</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/2vd877hq1ysg78o/Note%20for%20PGCIL%20Consultancy.doc?dl=1">Note for PGCIL Consultancy</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/ildjbdr4iqkeheg/Notice%20for%20open%20house%20discussion.docx?dl=1">Notice for open house discussion</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/1xvwaxqdd3xudau/Road%20Map%20-%20Smart%20City%20Final.doc?dl=1">Road Map - Smart City Final</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/bh1exrpezy7cile/Smart%20City%20Gurgaon%20Noting.docx?dl=1">Smart City Gurgaon Noting</a>
-  </li>
-  <li>
-    <a href="https://www.dropbox.com/s/fia2rburioq8ugp/minutesofmeeting8thoctobershramshaktibhawandelh.zip?dl=1">Minutes of Meeting 8th October Shramshakti Bhawan Delhi</a>
-  </li>
-  <li><a href="https://www.dropbox.com/s/lfxn9snxmo9iatf/Gurgaon%20Manesar%20Urban%20Complex.jpg?dl=1">Final Development Plan for Urban Areas | Gurgaon-Manesar Urban-Complex-2021AD</a></li>
+  <% end %>
 </ul>

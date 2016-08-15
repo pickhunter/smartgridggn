@@ -1,0 +1,7 @@
+AWS:
+  S3:
+    BUCKET: 'smartgridgurgaon'
+    BUCKET_URL: '//s3-ap-southeast-1.amazonaws.com/smartgridgurgaon/'
+    ACCESS_KEY_ID: 'AKIAJWIERC6GSG66AIOA'
+    SECRET_ACCESS_KEY: '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'
+    REGION: 'ap-southeast-1'

@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get 'about-us', to:'static_pages#about', as: 'about_us'
   get 'smartgrid', to:'static_pages#smart_grid', as: 'smart_grid'
   get 'news', to:'static_pages#news', as: 'news'
-  get 'tender', to:'static_pages#tender', as: 'tender'
+  get 'tenders', to:'static_pages#tender', as: 'tender_list'
   get 'dhbvn', to:'static_pages#dhbvn', as: 'dhbvn'
   get 'under-construction', to: 'static_pages#under_construction', as: 'under_construction'
   get 'power-government-of-haryana', to:'static_pages#pgoh', as: 'pgoh'
@@ -44,6 +44,11 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get 'home/index'
+
+  scope '/admin', module: :admin do
+    resources :updates
+    resources :tenders
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
