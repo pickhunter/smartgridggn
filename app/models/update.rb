@@ -7,5 +7,5 @@ class Update < ActiveRecord::Base
 
   validates_attachment :file, presence: true,
     # content_type: { content_type: "image/jpeg" },
-    size: { in: 0..10.megabytes }
+    size: { in: 0..25.megabytes }
 end
