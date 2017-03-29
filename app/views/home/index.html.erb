@@ -21,7 +21,7 @@ images = [{
       <div class="panel-heading">Latest News</div>
       <div class="panel-body">
         <ul class="no-list-style">
-          <% (Update.order('updated_at DESC').take(3) + Tender.order('updated_at DESC').take(2)).each do |update| %>
+          <% (Update.order('updated_at DESC').take(4) + Tender.order('updated_at DESC').take(2)).each do |update| %>
           <li>
             <a href="<%= update.file.url %>" title="<%= update.text %>">
               <span class="fa fa-star text-danger"></span>
